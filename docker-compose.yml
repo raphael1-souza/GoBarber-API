@@ -3,6 +3,9 @@ services:
   teste-app:
     build: .
     command: yarn dev
+    volumes:
+      - .:/usr/app/
+      - /usr/app/node_modules
     depends_on:
       - db
     ports:
