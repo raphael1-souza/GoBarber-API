@@ -10,14 +10,13 @@ services:
       - db
     ports:
       - "3333:3333"
-    environment:
-      - DBUSER=postgres
-      - DBPASS=psql123
-      - DBHOST=db
-      - DBNAME=postgres
 
   db:
     image: postgres:10
     restart: always
     environment:
-      POSTGRES_PASSWORD: psql123
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=postgres
+    ports:
+      - 5432:5432
