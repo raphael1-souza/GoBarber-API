@@ -6,4 +6,4 @@ debug:
 	docker-compose up --build
 clean:
 	docker-compose stop && docker-compose rm -f
-rebuild:	clean	up
+rebuild:	clean	debug
